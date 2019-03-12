@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>AES加密界面</title>
+</head>
+<body>
+ 以下为加密界面
+ <p>
+  <form name="stuff">
+    <br>
+    输入一个16个ASCII字符以内的字符串
+    <p>
+      <table>
+        <tr>
+          <td>输入信息：</td>
+          <td><input type="text" name="text" name="indata" size="50" value="abcdefghijklmnop" /></td>
+          <td><input type="radio" name="intype" checked>ASCII
+              <input type="radio" name="intypr">十六进制
+              </td>
+      </tr>
+      <tr>
+        <td>密钥</td>
+            <td><select name="key">
+         <OPTION value="0f1571c947d9e8590cb7add6af7f6798">0f 15 71 c9 47 d9 e8 59 0c b7 ad d6 af 7f 67 98</OPTION>
+         <OPTION value="f6cc34cdc555c5418254260203ad3ecd">f6 cc 34 cd c5 55 c5 41 82 54 26 02 03 ad 3e cd</OPTION>
+         <OPTION value="3070971ab7ce45063fd2573f49f5420d">30 70 97 1a b7 ce 45 06 3f d2 57 3f 49 f5 42 0d</OPTION>
+         <OPTION value="a9aa1f9fd153bcb6c7834212c51f5c41">a9 aa 1f 9f d1 53 bc b6 c7 83 42 12 c5 1f 5c 41</OPTION>
+         <OPTION value="d2f60c436e7ccebb8eaceaf3f86c8bad">d2 f6 0c 43 6e 7c ce bb 8e ac ea f3 f8 6c 8b ad</OPTION>
+         <OPTION value="2b7e151628aed2a6abf7158809cf4f3c">2b 7e 15 16 28 ae d2 a6 ab f7 15 88 09 cf 4f 3c</OPTION>
+       </select></td>
+       <td></td>
+       </tr>
+       <tr>
+           <td colspan=3 align=center>
+               <input type="button" value="加密" onClick="aes_encrypt();" />
+               <input type="button" value="解密" onClick="aes_decrypt();" />
+               </td>
+       </tr>
+       <tr>
+           <td>输出信息:</td>
+           <td><input type="text" name="outdata" size="50" /></td>
+           <td><input type="radio" name="outtype" onClick="format_AES_output();">ASCII
+             <input type="radio" name="outtype" checked onClick="format_AES_output();">十六进制
+          </td>
+      </tr>
+      </table>
+      <hr>
+      细节:<br>
+      <Textarea name="details" id="details" rows="25" cols="90"></Textarea>
+      </form>
+      </body>
+</html>
